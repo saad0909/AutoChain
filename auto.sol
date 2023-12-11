@@ -133,13 +133,15 @@ contract MyAutoChain {
             string[] memory details = new string[](bcars);
             uint[] memory prices = new uint[](bcars);
             address[] memory owners = new address[](bcars);
+            uint index = 0;
             for (uint i = 0; i < addresses.length; i++) {
                 for(uint j = 0; j < buy_cars[address_ids[addresses[i]]].length; j++) {
                     if (keccak256(bytes(buy_cars[address_ids[addresses[i]]][j].status)) == keccak256(bytes("available"))) {
-                        names[j] = buy_cars[address_ids[addresses[i]]][j].name;
-                        details[j] = buy_cars[address_ids[addresses[i]]][j].details;
-                        prices[j] = buy_cars[address_ids[addresses[i]]][j].price;
-                        owners[j] = buy_cars[address_ids[addresses[i]]][j].owner;
+                        names[index] = buy_cars[address_ids[addresses[i]]][j].name;
+                        details[index] = buy_cars[address_ids[addresses[i]]][j].details;
+                        prices[index] = buy_cars[address_ids[addresses[i]]][j].price;
+                        owners[index] = buy_cars[address_ids[addresses[i]]][j].owner;
+                        index++;
                     }
                 }
             }
@@ -150,13 +152,15 @@ contract MyAutoChain {
             string[] memory details = new string[](rcars);
             uint[] memory prices = new uint[](rcars);
             address[] memory owners = new address[](rcars);
+            uint index = 0;
             for (uint i = 0; i < addresses.length; i++) {
                 for(uint j = 0; j < rent_cars[address_ids[addresses[i]]].length; j++) {
                     if (keccak256(bytes(rent_cars[address_ids[addresses[i]]][j].status)) == keccak256(bytes("available"))) {
-                        names[j] = rent_cars[address_ids[addresses[i]]][j].name;
-                        details[j] = rent_cars[address_ids[addresses[i]]][j].details;
-                        prices[j] = rent_cars[address_ids[addresses[i]]][j].price;
-                        owners[j] = rent_cars[address_ids[addresses[i]]][j].owner;
+                        names[index] = rent_cars[address_ids[addresses[i]]][j].name;
+                        details[index] = rent_cars[address_ids[addresses[i]]][j].details;
+                        prices[index] = rent_cars[address_ids[addresses[i]]][j].price;
+                        owners[index] = rent_cars[address_ids[addresses[i]]][j].owner;
+                        index++;
                     }
                 }
             }
@@ -167,13 +171,15 @@ contract MyAutoChain {
             string[] memory details = new string[](acces);
             uint[] memory prices = new uint[](acces);
             address[] memory owners = new address[](acces);
+            uint index = 0;
             for (uint i = 0; i < addresses.length; i++) {
                 for(uint j = 0; j < accessories[address_ids[addresses[i]]].length; j++) {
                     if (keccak256(bytes(accessories[address_ids[addresses[i]]][j].status)) == keccak256(bytes("available"))) {
-                        names[j] = accessories[address_ids[addresses[i]]][j].name;
-                        details[j] = accessories[address_ids[addresses[i]]][j].details;
-                        prices[j] = accessories[address_ids[addresses[i]]][j].price;
-                        owners[j] = accessories[address_ids[addresses[i]]][j].owner;
+                        names[index] = accessories[address_ids[addresses[i]]][j].name;
+                        details[index] = accessories[address_ids[addresses[i]]][j].details;
+                        prices[index] = accessories[address_ids[addresses[i]]][j].price;
+                        owners[index] = accessories[address_ids[addresses[i]]][j].owner;
+                        index++;
                     }
                 }
             }
@@ -184,13 +190,15 @@ contract MyAutoChain {
             string[] memory details = new string[](mod);
             uint[] memory prices = new uint[](mod);
             address[] memory owners = new address[](mod);
+            uint index = 0;
             for (uint i = 0; i < addresses.length; i++) {
                 for(uint j = 0; j < modification[address_ids[addresses[i]]].length; j++) {
                     if (keccak256(bytes(modification[address_ids[addresses[i]]][j].status)) == keccak256(bytes("available"))) {
-                        names[j] = modification[address_ids[addresses[i]]][j].name;
-                        details[j] = modification[address_ids[addresses[i]]][j].details;
-                        prices[j] = modification[address_ids[addresses[i]]][j].price;
-                        owners[j] = modification[address_ids[addresses[i]]][j].owner;
+                        names[index] = modification[address_ids[addresses[i]]][j].name;
+                        details[index] = modification[address_ids[addresses[i]]][j].details;
+                        prices[index] = modification[address_ids[addresses[i]]][j].price;
+                        owners[index] = modification[address_ids[addresses[i]]][j].owner;
+                        index++;
                     }
                 }
             }
@@ -202,13 +210,15 @@ contract MyAutoChain {
             string[] memory details = new string[](insp);
             uint[] memory prices = new uint[](insp);
             address[] memory owners = new address[](insp);
+            uint index = 0;
             for (uint i = 0; i < addresses.length; i++) {
                 for(uint j = 0; j < inspection[address_ids[addresses[i]]].length; j++) {
                     if (keccak256(bytes(inspection[address_ids[addresses[i]]][j].status)) == keccak256(bytes("available"))) {
-                        names[j] = inspection[address_ids[addresses[i]]][j].name;
-                        details[j] = inspection[address_ids[addresses[i]]][j].details;
-                        prices[j] = inspection[address_ids[addresses[i]]][j].price;
-                        owners[j] = inspection[address_ids[addresses[i]]][j].owner;
+                        names[index] = inspection[address_ids[addresses[i]]][j].name;
+                        details[index] = inspection[address_ids[addresses[i]]][j].details;
+                        prices[index] = inspection[address_ids[addresses[i]]][j].price;
+                        owners[index] = inspection[address_ids[addresses[i]]][j].owner;
+                        index++;
                     }
                 }
             }
@@ -216,7 +226,7 @@ contract MyAutoChain {
         }
     }
 
-    function transfer_money2(address payable reciever, uint256 _amount, string memory name, uint price, string memory purpose) external payable {
+    function transfer_money2(address payable reciever, uint256 _amount, string memory name, uint price, string memory purpose) external payable is_logged_in() {
         reciever.transfer(_amount);
         emit transactions(msg.sender, reciever, _amount, name, price, purpose);
     }
