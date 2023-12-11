@@ -1,7 +1,7 @@
 const hre = require("hardhat");
 
 async function main() {
-  const lock = await hre.ethers.deployContract("SavingsLending");
+  const lock = await hre.ethers.deployContract("MyAutoChain");
   await lock.waitForDeployment();
   console.log(`deployed to ${lock.target}`);
 }
