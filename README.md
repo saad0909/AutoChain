@@ -52,7 +52,7 @@ Before you begin, ensure you have the following installed:
       url: "HTTP://127.0.0.1:7545",
       },
       },
-```
+  ```
 9. Replace the deploy.js file in scripts folder
 10. Deploy the contract to blockchain:
     ```bash
