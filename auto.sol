@@ -262,5 +262,3 @@ contract MyAutoChain {
         _;
     }
 }
-
-//0x88A7A9A6fA98DF1F8e60037aA8027743403fD8F9
