@@ -25,10 +25,13 @@ Before you begin, ensure you have the following installed:
 - [Ganache](https://www.trufflesuite.com/ganache) (for local blockchain development)
 - [Metamask](https://metamask.io/) browser extension
 
-### Installation
+### Installation and Setup
 1. Clone the repository:
    ```bash
    https://github.com/saad0909/AutoChain.git
    ```
-   next
+2. install hardhat:
+   ```bash
+   npm install --save-dev hardhat
+   ```
 
