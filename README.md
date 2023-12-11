@@ -30,8 +30,32 @@ Before you begin, ensure you have the following installed:
    ```bash
    https://github.com/saad0909/AutoChain.git
    ```
-2. install hardhat:
+2. Install hardhat:
    ```bash
    npm install --save-dev hardhat
    ```
+3. Create a hardhat project:
+   ```bash
+   npx hardhat
+   ```
+4. Copy the auto.sol file to contract folder
+5. Compile the contract:
+   ```bash
+npx hardhat compile
+   ```
+6. Run Ganache blockcahin
+7. Check from Ganache app the port and address at which blockchain is running
+8. goto hardhat.config.js file and check if networks configuration for localhost are mentioned if not then add configurations which you got in previous step from Ganache. It wil be most probably this:
+  ```bash
+    networks: {
+    localhost: {
+      url: "HTTP://127.0.0.1:7545",
+    },
+  },
+```
+9. Replace the deploy.js file in scripts folder
+10. Deploy the contract to blockchain:
+    ```bash
+    npx hardhat run scripts/deploy.js --network localhost
+    ```
 
