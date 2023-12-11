@@ -28,6 +28,7 @@ Before you begin, ensure you have the following installed:
 ### Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/cars-marketplace-dapp.git
-   cd cars-marketplace-dapp
+   https://github.com/saad0909/AutoChain.git
+   '''
+   next
 
