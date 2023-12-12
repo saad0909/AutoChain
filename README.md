@@ -63,7 +63,7 @@ Ganache. It wil be most probably this:
 ## Frontend
 12. Create a react app:
     ```bash
-    npm create-react-app myapp
+    npx create-react-app myapp
     ```
 13. add images folder and the credential.js, header.js, index.js, and css files in src folder
 14. Copy the address contract address returned on deploying the contract to contractAddress variable in header.js and credential.js files
