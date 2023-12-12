@@ -65,7 +65,7 @@ Ganache. It wil be most probably this:
     ```bash
     npx create-react-app myapp
     ```
-13. add images folder and the credential.js, header.js, index.js, and css files in src folder
+13. add images folder and the App.js, index.js, logo.html, and css files in src folder
 14. Copy the address contract address returned on deploying the contract to contractAddress variable in header.js and credential.js files
 15. Start the react app:
     ```bash
@@ -74,7 +74,7 @@ Ganache. It wil be most probably this:
     ![image](https://github.com/saad0909/AutoChain/assets/33553848/1ac32cfc-5af7-4ec8-9d1f-e0723a02c02d)
 
 ## Usage
-For new wallets interacting with the dapp need to register first to interact with the website
+For new wallets interacting with the dapp need to register with unique username and password of atleast 8 characters first to interact with the website
 For viewing transactions history click on List Events button
 ![image](https://github.com/saad0909/AutoChain/assets/33553848/6d697820-4a16-4740-a0fd-c01ac4a22486)
 
