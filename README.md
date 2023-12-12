@@ -8,7 +8,7 @@ Welcome to the Cars Marketplace DApp! This decentralized application (DApp) allo
 ## Table of Contents
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
-  - [Installation and Setup](#installation and Setup)
+  - [Installation and Setup](#installation-and-Setup)
 - [Smart Contract](#smart-contract)
 - [Frontend](#frontend)
 - [Usage](#usage)
