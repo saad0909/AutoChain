@@ -65,4 +65,6 @@ Before you begin, ensure you have the following installed:
 12. add images folder and the credential.js, header.js, index.js, and css files in src folder
 13. Copy the address contract address returned on deploying the contract to contractAddress variable in header.js and credential.js files
 14. Start the react app:
+    ```bash
     npm start
+    ```
