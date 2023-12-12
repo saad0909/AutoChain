@@ -44,7 +44,8 @@ Before you begin, ensure you have the following installed:
    ```
 6. Run Ganache blockcahin
 7. Check from Ganache app the port and address at which blockchain is running
-8. goto hardhat.config.js file and check if networks configuration for localhost are mentioned if not then add configurations which you got in previous step from Ganache. It wil be most probably this:
+8. goto hardhat.config.js file and check if networks configuration for localhost are mentioned if not then add configurations which you got in previous step from
+Ganache. It wil be most probably this:
       ```bash
           networks: {
           localhost: {
@@ -52,7 +53,9 @@ Before you begin, ensure you have the following installed:
           },
           },
       ```
-9. Replace the deploy.js file in scripts folder
+      ![image](https://github.com/saad0909/AutoChain/assets/33553848/a22f48e6-ad26-41a8-836c-007f6bcb31b4)
+
+10. Replace the deploy.js file in scripts folder
 11. Deploy the contract to blockchain:
     ```bash
     npx hardhat run scripts/deploy.js --network localhost
@@ -68,4 +71,16 @@ Before you begin, ensure you have the following installed:
     ```bash
     npm start
     ```
+    ![image](https://github.com/saad0909/AutoChain/assets/33553848/1ac32cfc-5af7-4ec8-9d1f-e0723a02c02d)
+
 ## Usage
+For new wallets interacting with the dapp need to register first to interact with the website
+For viewing transactions history click on List Events button
+![image](https://github.com/saad0909/AutoChain/assets/33553848/6d697820-4a16-4740-a0fd-c01ac4a22486)
+
+For viewing different services like buying and renting click on their buttons
+![image](https://github.com/saad0909/AutoChain/assets/33553848/8bca30a0-01f1-489a-acfb-1c58173e9ffc)
+
+For adding new service the purpose input field can have only 4 types of values("selling", "renting", "accessories", "modification", "selling")
+
+
