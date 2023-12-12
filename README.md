@@ -36,6 +36,7 @@ Before you begin, ensure you have the following installed:
    ```bash
    npx hardhat
    ```
+## Smart Contract
 4. Copy the auto.sol file to contract folder
 5. Compile the contract:
    ```bash
@@ -52,7 +53,6 @@ Before you begin, ensure you have the following installed:
           },
       ```
 9. Replace the deploy.js file in scripts folder
-## Smart Contract
 11. Deploy the contract to blockchain:
     ```bash
     npx hardhat run scripts/deploy.js --network localhost
