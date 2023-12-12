@@ -8,12 +8,10 @@ Welcome to the Cars Marketplace DApp! This decentralized application (DApp) allo
 ## Table of Contents
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
+  - [Installation and Setup](#installation and Setup)
 - [Smart Contract](#smart-contract)
 - [Frontend](#frontend)
 - [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Getting Started
 
@@ -54,17 +52,20 @@ Before you begin, ensure you have the following installed:
           },
       ```
 9. Replace the deploy.js file in scripts folder
-10. Deploy the contract to blockchain:
+## Smart Contract
+11. Deploy the contract to blockchain:
     ```bash
     npx hardhat run scripts/deploy.js --network localhost
     ```
-11. Create a react app:
+## Frontend
+12. Create a react app:
     ```bash
     npm create-react-app myapp
     ```
-12. add images folder and the credential.js, header.js, index.js, and css files in src folder
-13. Copy the address contract address returned on deploying the contract to contractAddress variable in header.js and credential.js files
-14. Start the react app:
+13. add images folder and the credential.js, header.js, index.js, and css files in src folder
+14. Copy the address contract address returned on deploying the contract to contractAddress variable in header.js and credential.js files
+15. Start the react app:
     ```bash
     npm start
     ```
+## Usage
